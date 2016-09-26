@@ -1,14 +1,14 @@
 package com.epam.second.entity;
 
 public abstract class Sweet {
-    private int id;
+    private int sweetId;
     private String name;
     private int weight;
     private int sugar;
     private int calories;
 
     Sweet() {
-        this.id = 0;
+        this.sweetId = 0;
         this.name = "no name";
         this.weight = 0;
         this.sugar = 0;
@@ -16,7 +16,7 @@ public abstract class Sweet {
     }
 
     Sweet(int id, String name, int weight, int sugar, int calories) {
-        this.id = id;
+        this.sweetId = id;
         this.name = name;
         this.weight = weight;
         this.sugar = sugar;
@@ -24,11 +24,11 @@ public abstract class Sweet {
     }
 
     public int getId() {
-        return id;
+        return sweetId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setId(int sweetId) {
+        this.sweetId = sweetId;
     }
 
     public String getName() {
@@ -70,7 +70,7 @@ public abstract class Sweet {
 
         Sweet sweet = (Sweet) o;
 
-        if (id != sweet.id) return false;
+        if (sweetId != sweet.sweetId) return false;
         if (weight != sweet.weight) return false;
         if (sugar != sweet.sugar) return false;
         if (calories != sweet.calories) return false;
@@ -80,7 +80,7 @@ public abstract class Sweet {
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result = sweetId;
         result = 31 * result + name.hashCode();
         result = 31 * result + weight;
         result = 31 * result + sugar;

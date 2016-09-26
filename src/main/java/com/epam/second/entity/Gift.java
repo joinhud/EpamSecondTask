@@ -14,8 +14,14 @@ public class Gift {
         return sweets;
     }
 
-    public void addSweet(Sweet sweet) {
-        sweets.add(sweet);
+    public boolean addSweet(Sweet sweet) {
+        boolean result = false;
+        if(sweet != null) {
+            sweets.add(sweet);
+            result = true;
+        }
+
+        return result;
     }
 
 }

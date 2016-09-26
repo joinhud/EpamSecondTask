@@ -1,4 +1,4 @@
-package com.epam.second.main;
+package com.epam.second.run;
 
 public class Main {
     public static void main(String param[]) {

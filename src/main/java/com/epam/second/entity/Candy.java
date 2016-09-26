@@ -1,5 +1,7 @@
 package com.epam.second.entity;
 
+import com.epam.second.type.TypeCandy;
+
 public class Candy extends Sweet {
 
     private TypeCandy type;

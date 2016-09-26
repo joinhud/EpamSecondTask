@@ -1,5 +1,7 @@
 package com.epam.second.entity;
 
+import com.epam.second.type.ChocolateColor;
+
 public class Chocolate extends Sweet {
     private ChocolateColor color;
 

@@ -1,4 +1,4 @@
-package com.epam.second.entity;
+package com.epam.second.type;
 
 
 public enum TypeCandy {
