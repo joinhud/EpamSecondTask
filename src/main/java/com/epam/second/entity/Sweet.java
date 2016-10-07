@@ -16,11 +16,11 @@ public abstract class Sweet {
     }
 
     Sweet(int id, String name, int weight, int sugar, int calories) {
-        this.sweetId = id;
-        this.name = name;
-        this.weight = weight;
-        this.sugar = sugar;
-        this.calories = calories;
+        setId(id);
+        setName(name);
+        setWeight(weight);
+        setSugar(sugar);
+        setCalories(calories);
     }
 
     public int getId() {
@@ -28,7 +28,7 @@ public abstract class Sweet {
     }
 
     public void setId(int sweetId) {
-        this.sweetId = sweetId;
+        this.sweetId = sweetId >= 0 ? sweetId : 0;
     }
 
     public String getName() {
@@ -36,7 +36,7 @@ public abstract class Sweet {
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name = name != null ? name : "no name";
     }
 
     public int getWeight() {
@@ -44,7 +44,7 @@ public abstract class Sweet {
     }
 
     public void setWeight(int weight) {
-        this.weight = weight;
+        this.weight = weight >= 0 ? weight : 0;
     }
 
     public int getSugar() {
@@ -52,7 +52,7 @@ public abstract class Sweet {
     }
 
     public void setSugar(int sugar) {
-        this.sugar = sugar;
+        this.sugar = sugar >= 0 ? sugar : 0;
     }
 
     public int getCalories() {
@@ -60,8 +60,10 @@ public abstract class Sweet {
     }
 
     public void setCalories(int calories) {
-        this.calories = calories;
+        this.calories = calories >= 0 ? calories : 0;
     }
+
+    public abstract String defineType();
 
     @Override
     public boolean equals(Object o) {
@@ -86,5 +88,16 @@ public abstract class Sweet {
         result = 31 * result + sugar;
         result = 31 * result + calories;
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Sweet{" +
+                "sweetId=" + sweetId +
+                ", name='" + name + '\'' +
+                ", weight=" + weight +
+                ", sugar=" + sugar +
+                ", calories=" + calories +
+                ", type=" + defineType() + '}';
     }
 }

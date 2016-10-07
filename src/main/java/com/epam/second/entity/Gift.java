@@ -1,16 +1,17 @@
 package com.epam.second.entity;
 
 import java.util.LinkedList;
+import java.util.List;
 
 public class Gift {
 
     private LinkedList<Sweet> sweets;
 
     public Gift() {
-        this.sweets = new LinkedList<Sweet>();
+        this.sweets = new LinkedList<>();
     }
 
-    public LinkedList<Sweet> getSweets() {
+    public List<Sweet> getSweets() {
         return sweets;
     }
 
