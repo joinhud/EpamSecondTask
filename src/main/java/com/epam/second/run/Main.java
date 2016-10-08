@@ -14,6 +14,7 @@ public class Main {
     private static final Logger LOG = LogManager.getRootLogger();
 
     public static void main(String param[]) {
+        LOG.info("Application start.");
         Gift gift = new Gift();
         BuildGift builder = new BuildGift();
         GiftAction action = new GiftAction();
@@ -29,5 +30,6 @@ public class Main {
         } catch (GiftActionLogicException | GiftLogicException e) {
             LOG.log(Level.ERROR, e);
         }
+        LOG.info("Application end.");
     }
 }

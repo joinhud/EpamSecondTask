@@ -93,10 +93,10 @@ public abstract class Sweet {
     @Override
     public String toString() {
         return "Sweet{" +
-                "sweetId=" + sweetId +
+                "Id=" + sweetId +
                 ", name='" + name + '\'' +
-                ", weight=" + weight +
-                ", sugar=" + sugar +
+                ", weight=" + weight + " g" +
+                ", sugar=" + sugar + " %" +
                 ", calories=" + calories +
                 ", type=" + defineType() + '}';
     }

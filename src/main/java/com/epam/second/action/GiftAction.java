@@ -63,7 +63,7 @@ public class GiftAction {
         }
 
         return gift.getSweets().stream()
-                                .map(Sweet::toString)
-                                .collect(Collectors.toList());
+                .map(Sweet::toString)
+                .collect(Collectors.toList());
     }
 }
